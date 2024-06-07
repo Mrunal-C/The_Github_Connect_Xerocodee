@@ -34,25 +34,19 @@ To install and run GitHub Connect locally, follow these steps:
     cd github-connect
     ```
 
-3. **Install dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Run migrations:**
+3. **Run migrations:**
 
     ```bash
     python manage.py migrate
     ```
 
-5. **Start the development server:**
+4. **Start the development server:**
 
     ```bash
     python manage.py runserver
     ```
 
-6. **Access the application:**
+5. **Access the application:**
 
     Open your web browser and go to [http://localhost:8000/](http://localhost:8000/).
 
