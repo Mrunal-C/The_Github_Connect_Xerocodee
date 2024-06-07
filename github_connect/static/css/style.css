@@ -1,0 +1,90 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center align container */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+}
+
+/* Form container styles */
+.form-container {
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column; /* Display form items in a column */
+}
+
+.form-container .form-row {
+    /*align-items: center;/* Center items vertically */
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+.form-container label {
+    flex: 1; /* Take remaining space */
+    margin-right: 10px;
+}
+
+.form-container input[type="text"] {
+    flex: 2; /* Take double space of label */
+    padding: 8px;
+}
+
+.form-container button {
+    padding: 8px 20px;
+    background-color: #2b46cdf0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0d1a59f0;
+}
+
+/* Repository container styles */
+.repository-container {
+    margin-top: 20px; /* Add space between form and repository list */
+}
+
+.repository-container h2 {
+    margin-bottom: 10px;
+}
+
+.repository-container ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.repository-container li {
+    margin-bottom: 15px;
+}
+
+.repository-container .repo-number {
+    margin-right: 5px;
+}
+
+.repository-container .repo-name {
+    font-weight: bold;
+}
+
+.repository-container .repo-link {
+    margin-left: 22.5px;
+}
+

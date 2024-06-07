@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - GitHub Connect</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to GitHub Connect!</h1>
+        </header>
+        <div class="form-container">
+            <form action="{% url 'fetch_repositories' %}" method="get">
+                <div class="form-row">
+                    <label for="access_token">GitHub Access Token:</label>
+                    <input type="text" id="access_token" name="access_token" required>
+                </div>
+                <button type="submit">Fetch Repositories</button>
+            </form>
+        </div>
+        <div class="repository-container">
+            <!-- Display fetched repositories here -->
+            {% if repositories %}
+            <h2>Repositories:</h2>
+            <ol>
+                {% for repo in repositories %}
+                <li>
+                    <span class="repo-number">{{ forloop.counter }}.</span>
+                    <span class="repo-name">{{ repo.name }}</span>
+                    <br>
+                    <a class="repo-link" href="{{ repo.url }}" target="_blank">View on GitHub</a>
+                    <br>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

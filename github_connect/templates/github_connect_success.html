@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repositories Fetched Successfully!</title>
+</head>
+<body>
+    <h1>GitHub Repositories Fetched Successfully!</h1>
+    <p>Repositories have been fetched successfully. You can view them below.</p>
+    <ul>
+    {% for repo in repos %}
+        <li>
+            <a href="{{ repo.repo_url }}">{{ repo.repo_name }}</a>
+            ({{ repo.owner }})
+            {% if repo.is_private %}(Private){% endif %}
+        </li>
+    {% empty %}
+        <li>No repositories found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
